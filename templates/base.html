@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'blog/base.css' %}?v=3">
+    {% block css_files %}{% endblock %}
+</head>
+<body>
+    <header id="main-navigation">
+        <a href="{% url 'starting-page' %}">SYAL Blog</a>
+        <nav>
+            <a href="{% url 'posts-page' %}">All Posts</a>
+        </nav>
+    </header>
+    {% block content %}{% endblock %}
+    <footer id="what-i-do">
+        <h2>What I Do</h2>
+        <p>I love programming, helping others, and exploring new technologies.</p>
+        <p>My goal is to keep growing as a developer &mdash; and if I can help you do the same, I'll be very happy!</p>
+        <small>&copy; {% now "Y" %} SYAL Blog</small>
+    </footer>
+</body>
+</html>

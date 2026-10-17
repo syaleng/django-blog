@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Page Not Found{% endblock %}
+
+{% block content %}
+    <main class="error-page">
+        <p class="error-code">404</p>
+        <h1>We didn't find that page!</h1>
+        <p>Sorry, the page you requested does not exist.</p>
+        <a href="{% url 'starting-page' %}">Return to SYAL Blog</a>
+    </main>
+{% endblock %}
